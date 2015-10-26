@@ -54,12 +54,19 @@ module Blade::Assets
   end
 
   def user_load_paths
+    gem_load_paths + 
     Blade.config.load_paths.map { |a| Pathname.new(a) }
   end
 
   def adapter_load_paths
     gem_name = "blade-#{Blade.config.framework}_adapter"
     [ gem_pathname(gem_name).join("assets") ]
+  end
+
+  def gem_load_paths
+    Blade.config.gem_paths.flat_map do |gem_name, paths|
+      paths.map { |path| gem_pathname(gem_name).join(path) }
+    end
   end
 
   def watch_logical_paths

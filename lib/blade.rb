@@ -118,6 +118,7 @@ module Blade
       options[:framework] ||= DEFAULT_FRAMEWORK
       options[:port] ||= DEFAULT_PORT
       options[:load_paths] = Array(options[:load_paths])
+      options[:gem_paths] = Hash(options[:gem_paths])
       options[:logical_paths] = Array(options[:logical_paths])
 
       if build_options = options.delete(:build)
