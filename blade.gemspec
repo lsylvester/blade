@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "curses", "~> 1.0.0"
   spec.add_dependency "eventmachine", "~> 1.0.0"
   spec.add_dependency "faye", "1.1.1"
-  spec.add_dependency "sprockets", "~> 3.2.0"
+  spec.add_dependency "sprockets", "~> 3.5.0"
   spec.add_dependency "thin", "~> 1.6.0"
   spec.add_dependency "useragent", "~> 0.13.0"
   spec.add_dependency "thor", "~> 0.19.1"
